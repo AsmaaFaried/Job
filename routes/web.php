@@ -23,5 +23,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::resource('/author/posts', PostController::class)->middleware('auth');
-Route::resource('/posts', AdminController::class)->middleware('isAdmin');
+
+// Normal User routes
+Route::resource('/posts', PostController::class)->middleware('auth');
+
+// Admin routes
+Route::resource('/admin/posts', AdminController::class)->middleware(['auth','isAdmin']);
