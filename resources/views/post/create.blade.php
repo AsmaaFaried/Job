@@ -13,12 +13,12 @@
 
         </div>
 
-      
+
     </div>
 
 </div>
 
-   
+
 
 @if ($errors->any())
 
@@ -40,17 +40,17 @@
 
 @endif
 
-   
+
 
 <form action="{{ route('posts.store') }}" method="POST">
 
     @csrf
 
-  
+
 
      <div class="row">
 
-     
+
 
         <div class="col-xs-12 col-sm-12 col-md-12">
 
@@ -64,21 +64,23 @@
 
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center m-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
+       <div>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center m-3">
+                <button type="submit" class="btn btn-outline-primary">Post</button>
 
-        </div>
+            </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center m-3">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center m-3">
 
-            <a class="btn btn-danger" href="{{ route('posts.index') }}"> Back</a>
+                <a class="btn btn-outline-danger" href="{{ route('posts.index') }}"> Back</a>
 
-        </div>
+            </div>
+       </div>
 
 
     </div>
 
-   
+
 
 </form>
 </div>

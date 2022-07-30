@@ -11,13 +11,13 @@
 
             </div>
 
-          
+
 
         </div>
 
     </div>
 
-   
+
 
     @if ($errors->any())
 
@@ -39,7 +39,7 @@
 
     @endif
 
-  
+
 
     <form action="{{ route('posts.update',$post->id) }}" method="POST">
 
@@ -47,7 +47,7 @@
 
         @method('PUT')
 
-   
+
 
          <div class="row">
 
@@ -63,20 +63,22 @@
 
             </div>
 
+           <div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 
-              <button type="submit" class="btn btn-primary m-3">Submit</button>
+                <button type="submit" class="btn btn-outline-primary m-3">Edit</button>
 
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center m-3">
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 
-                <a class="btn btn-danger" href="{{ route('posts.index') }}"> Back</a>
+                  <a class="btn btn-outline-danger" href="{{ route('posts.index') }}"> Back</a>
 
-            </div>
+              </div>
+           </div>
 
         </div>
 
-   
+
 
     </form>
 </div>
